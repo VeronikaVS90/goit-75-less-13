@@ -26,19 +26,19 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="header-container">
-          <nav class="header-nav">
+        <div class="header__container">
+          <nav class="header__nav">
             <a href="/">
               <img src="./images/logo.svg" alt="Awesome UI logo" />
             </a>
-            <ul class="header-menu">
-              <li><a class="header-link" href="#benefits">Benefits</a></li>
-              <li><a class="header-link" href="#features">Features</a></li>
-              <li><a class="header-link current" href="#about">About</a></li>
-              <li><a class="header-link" href="#team">Team</a></li>
+            <ul class="header__menu">
+              <li><a class="header__link" href="#benefits">Benefits</a></li>
+              <li><a class="header__link" href="#features">Features</a></li>
+              <li><a class="header__link header__link--current" href="#about">About</a></li>
+              <li><a class="header__link" href="#team">Team</a></li>
             </ul>
           </nav>
-          <button class="button button-small" type="button">Register</button>
+          <button class="header__button button button-small" type="button">Register</button>
         </div>
       </div>
     </header>
@@ -127,7 +127,6 @@
                 </svg>
                 <h3>MOT consectet</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae</p>
-                <!-- <p class="feature-card-text">Lorem ipsum dolor sit.</p> -->
               </div>
             </li>
             <li class="features-item">
@@ -137,12 +136,6 @@
                 </svg>
                 <h3>MOT consectet</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae</p>
-                <!-- <div class="feature-card-overlay">
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem similique sint
-                    molestiae non incidunt cum velit repellat porro accusamus qui!
-                  </p>
-                </div> -->
               </div>
             </li>
             <li class="features-item">
@@ -249,75 +242,67 @@
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <div class="modal-container">
-          <button class="modal-close" type="button" data-modal-close>
-            <svg class="modal-close-icon" width="24" height="24">
+        <div class="modal__container">
+          <button class="modal__close" type="button" data-modal-close>
+            <svg width="24" height="24">
               <use href="./images/icons.svg#icon-closeui"></use>
             </svg>
           </button>
-          <h2 class="modal-title">Залиште свої дані</h2>
-          <form class="modal-form" name="contact-form" autocomplete="on">
-            <!-- <label class="form-field-label" for="test">Тест</label>
-            <div class="form-field">
-              <input
-                class="form-field-input"
-                id="test"
-                type="number"
-                name="test"
-                min="2"
-                max="20"
-                title="Значення повинно бути від 2 до 20"
-              />
-              <svg class="form-field-icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-person"></use>
-              </svg>
-            </div> -->
 
-            <label class="form-field-label" for="user-name">Ім'я<sup>*</sup></label>
-            <div class="form-field">
-              <input
-                class="form-field-input"
-                id="user-name"
-                type="text"
-                name="user-name"
-                pattern="^[Є-Яа-ї]+\s[Є-Яа-ї]+$"
-                title="Поле повинно містити імя та прізвище"
-                placeholder=" "
-                required
-              />
-              <svg class="form-field-icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-person"></use>
-              </svg>
+          <h2 class="modal__title">Залиште свої дані</h2>
+
+          <form name="contact-form" autocomplete="on">
+            <div class="modal__form-field form-field">
+              <label class="form-field__label" for="user-name">Ім'я<sup>*</sup></label>
+              <div class="form-field__control">
+                <input
+                  class="form-field__input"
+                  id="user-name"
+                  type="text"
+                  name="user-name"
+                  pattern="^[Є-Яа-ї]+\s[Є-Яа-ї]+$"
+                  title="Поле повинно містити імя та прізвище"
+                  placeholder=" "
+                  required
+                />
+                <svg class="form-field__icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-person"></use>
+                </svg>
+              </div>
             </div>
 
-            <label class="form-field-label" for="user-tel">Телефон<sup>*</sup></label>
-            <div class="form-field">
-              <input
-                class="form-field-input"
-                id="user-tel"
-                type="tel"
-                name="user-tel"
-                placeholder=" "
-                required
-              />
-              <svg class="form-field-icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-phone"></use>
-              </svg>
+            <div class="modal__form-field form-field">
+              <label class="form-field__label" for="user-tel">Телефон<sup>*</sup></label>
+              <div class="form-field__control">
+                <input
+                  class="form-field__input"
+                  id="user-tel"
+                  type="tel"
+                  name="user-tel"
+                  placeholder=" "
+                  required
+                />
+                <svg class="form-field__icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
             </div>
 
-            <label class="form-field-label" for="user-email">Пошта<sup>*</sup></label>
-            <div class="form-field">
-              <input
-                class="form-field-input"
-                id="user-email"
-                type="email"
-                name="user-email"
-                placeholder=" "
-                required
-              />
-              <svg class="form-field-icon" width="16" height="16">
-                <use href="./images/icons.svg#icon-email"></use>
-              </svg>
+            <div class="modal__form-field form-field">
+              <label class="form-field__label" for="user-email">Пошта<sup>*</sup></label>
+              <div class="form-field__control">
+                <input
+                  class="form-field__input"
+                  id="user-email"
+                  type="email"
+                  name="user-email"
+                  placeholder=" "
+                  required
+                />
+                <svg class="form-field__icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
             </div>
 
             <label class="form-field-label" for="user-comment">Коментар</label>
