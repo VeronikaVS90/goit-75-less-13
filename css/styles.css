@@ -36,6 +36,8 @@
   --color-heading-title: #f3b562;
   --color-heading-subtitle: #647b64;
 
+  --color-footer-bcg: #f0dcc5;
+
   --color-modal-border: #bdbdbd;
 
   --decor-gradient: linear-gradient(
@@ -57,8 +59,8 @@ html {
 
 body {
   color: var(--color-primary);
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-background);
@@ -128,7 +130,7 @@ img {
 }
 
 .header__link:hover {
-  text-decoration: underline;
+  color: var(--color-brand);
 }
 
 .header__link--current {
@@ -169,6 +171,7 @@ img {
   color: var(--color-background-action);
   background-image: none;
   background-color: var(--color-text-action);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .button-small {
@@ -239,7 +242,20 @@ img {
   text-transform: uppercase;
 }
 
+.heading-text {
+  margin-bottom: 40px;
+}
+
 /* Advantage section */
+.advantages-container {
+  width: 440px;
+}
+
+.common.container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .advantages {
   position: relative;
 }
@@ -247,8 +263,8 @@ img {
 .advantages::before {
   position: absolute;
   z-index: -1;
-  top: 24px;
   left: 0;
+  top: 24px;
   width: 600px;
   height: 160px;
   background-image: var(--decor-gradient);
@@ -256,27 +272,81 @@ img {
 }
 
 /* Advantage card */
+.card-thumb {
+  width: 600px;
+  display: flex;
+}
+
+.common.container {
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-element {
+  width: 288px;
+  height: 238px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.flex-element:nth-child(2n) {
+  margin-right: 0;
+}
+
+.flex-element:nth-last-child(-n + 2) {
+  margin-bottom: 0;
+}
+
 .advantage-card {
   padding: 32px 40px;
   border-radius: 8px;
   margin-bottom: 32px;
 }
 
-.advantage-card:hover {
+.flex-element:hover {
   background-color: var(--color-invert);
+}
+
+.flex-element:hover .thumb {
+  background-color: var(--color-brand);
+}
+
+.flex-element:hover .advantage-card-icon {
+  fill: var(--color-invert);
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-invert);
+  border-radius: 8px;
 }
 
 .advantage-card-icon {
   fill: var(--color-brand);
-  margin-bottom: 16px;
 }
 
 .advantage-card-title {
   margin-bottom: 8px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 .advantage-card-text {
   margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 1.571;
 }
 
 /* Features section */
@@ -338,6 +408,40 @@ img {
   margin-bottom: 32px;
 }
 
+.about-us.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading-thumb {
+  width: 454px;
+}
+
+.heading-text {
+  margin-bottom: 40px;
+}
+
+.team.section {
+  padding-top: 24px;
+}
+
+/* Footer */
+.footer {
+  padding-top: 48px;
+  padding-bottom: 80px;
+  background-color: var(--color-footer-bcg);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text {
+  max-width: 268px;
+  margin-top: 16px;
+}
+
 /* Socials */
 .socials-list {
   display: flex;
@@ -363,6 +467,56 @@ img {
 .socials-link:hover {
   background-color: var(--color-brand);
   fill: var(--color-tertiary);
+}
+
+.footer-title {
+  color: var(--color-brand);
+  margin-bottom: 24px;
+}
+
+.footer-form-title {
+  color: var(--color-brand);
+  margin-bottom: 16px;
+}
+
+.footer-item {
+  margin-bottom: 12px;
+}
+
+.footer-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-link {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--color-brand);
+}
+
+.footer-input {
+  width: 268px;
+  height: 144px;
+  border: none;
+}
+
+.footer-form-textarea {
+  padding-left: 24px;
+  padding-top: 16px;
+  margin-bottom: 16px;
+  width: 268px;
+  height: 144px;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+.footer-form-textarea::placeholder {
+  font-size: 14px;
+  line-height: 1.571;
 }
 
 /* Modal */
