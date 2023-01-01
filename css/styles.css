@@ -222,6 +222,7 @@ img {
 
 .hero-text {
   margin-bottom: 40px;
+  max-width: 500px;
 }
 
 /* Heading */
@@ -421,8 +422,52 @@ img {
   margin-bottom: 40px;
 }
 
+/* Team */
+
 .team.section {
   padding-top: 24px;
+}
+
+.team-list {
+  display: flex;
+  gap: 32px;
+}
+
+.team-item {
+  position: relative;
+  width: 368px;
+  height: 408px;
+  padding-top: 24px;
+  padding-left: 32px;
+  background-color: var(--color-invert);
+  background-image: url(../images/gradient.png);
+  border-radius: 8px;
+}
+
+.team-card-title {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+}
+
+.team-text {
+  margin: 0;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+.team-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.571;
+  text-transform: uppercase;
+}
+
+.blockquote {
+  min-width: 304px;
+  margin: 24px 0 auto;
+
+  font-style: italic;
 }
 
 /* Footer */

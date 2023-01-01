@@ -216,28 +216,37 @@
         <div class="container">
           <h2 class="heading-title" data-aos="fade-right">Our Team</h2>
           <p class="heading-subtitle">How we look like</p>
-          <ul>
-            <li>
-              <img src="#" alt="" />
-              <p>CTO May & Baker</p>
-              <h3>Tayo Oshinuwa</h3>
-              <blockquote>
+
+          <ul class="team-list">
+            <li class="team-item">
+              <img src="./images/one.jpg" alt="man in the suit" width="180" height="264" />
+             <div class="team-card-title">
+              <p class="team-text">CTO May & Baker</p>
+              <h3 class="team-title">Tayo Oshinuwa</h3>
+            </div> 
+              <blockquote class="blockquote">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“
               </blockquote>
             </li>
-            <li>
-              <img src="#" alt="" />
-              <p>CTO May & Baker</p>
-              <h3>Tayo Oshinuwa</h3>
-              <blockquote>
+
+            <li class="team-item">
+              <img src="./images/two.jpg" alt="woman with ponytail" width="170" height="264" />
+              <div class="team-card-title">
+              <p class="team-text">CTO May & Baker</p>
+              <h3 class="team-title">Tayo Oshinuwa</h3>
+            </div> 
+              <blockquote class="blockquote">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“
               </blockquote>
             </li>
-            <li>
-              <img src="#" alt="" />
-              <p>CTO May & Baker</p>
-              <h3>Tayo Oshinuwa</h3>
-              <blockquote>
+
+            <li class="team-item">
+              <img src="./images/three.jpg" alt="man in the cap" width="180" height="264" />
+             <div class="team-card-title">
+              <p class="team-text">CTO May & Baker</p>
+              <h3 class="team-title">Tayo Oshinuwa</h3>
+            </div> 
+              <blockquote class="blockquote">
                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit quis vitae“
               </blockquote>
             </li>
@@ -322,6 +331,7 @@
               name="mail"
               id="mail"
               placeholder="Your email address"
+              required
             ></textarea>
 
             <button class="button" type="submit">Send message
@@ -384,7 +394,7 @@
             </div>
 
             <div class="modal__form-field form-field">
-              <label class="form-field__label" for="user-email">Пошта<sup>*</sup></label>
+              <label class="form-field__label" for="user-email">Пошта</label>
               <div class="form-field__control">
                 <input
                   class="form-field__input"
@@ -392,7 +402,7 @@
                   type="email"
                   name="user-email"
                   placeholder=" "
-                  required
+                  
                 />
                 <svg class="form-field__icon" width="16" height="16">
                   <use href="./images/icons.svg#icon-email"></use>
