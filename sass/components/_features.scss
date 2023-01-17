@@ -1,0 +1,75 @@
+.container {
+    @extend %container;
+}
+
+.features {
+    @extend %section;
+    position: relative;
+
+    &::before {
+            position: absolute;
+            z-index: -1;
+            bottom: 24px;
+            right: 0;
+            width: 600px;
+            height: 160px;
+            background-image: url(../images/dcr_bcg.png);
+            transform: rotate(180deg);
+            content: '';
+        }
+    
+        &::after {
+            position: absolute;
+            z-index: -1;
+            bottom: 24px;
+            left: 0;
+            width: 224px;
+            height: 224px;
+            background-image: url('../images/decordots.png');
+            transform: rotate(180deg);
+            content: '';
+        }
+    
+        &__list {
+            display: flex;
+            gap: 44px;
+            flex-wrap: wrap;
+        }
+    
+        &__item {
+            flex-basis: calc((100% - 88px) / 3);
+        }
+    
+    
+    
+        &__card {
+            padding: 64px 50px 60px;
+            fill: $colorBrand;
+            background-color: $colorInvert;
+            border-radius: 8px;
+    
+            .features__item:nth-child(even) & {
+                color: $colorInvert;
+                fill: $colorInvert;
+                background-color: $colorBrand;
+            }
+        }
+    
+        &__icon {
+            margin-bottom: 32px;
+        }
+    
+        &__title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 1.5;
+            font-variant: small-caps;
+    
+            &--uppercase {
+                text-transform: uppercase;
+            }
+        }
+}
+
+
+

@@ -1,0 +1,49 @@
+.team {
+    @extend %container;
+    @extend %section;
+    padding-top: 24px;
+
+    &__list {
+            display: flex;
+            gap: 32px;
+        }
+    
+        &__item {
+            position: relative;
+            width: 368px;
+            height: 408px;
+            padding-top: 24px;
+            padding-left: 32px;
+            background-color: $colorInvert;
+            background-image: url(../images/gradient.png);
+            border-radius: 8px;
+        }
+    
+        &__content {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+        }
+    
+        &__text {
+            margin: 0;
+            font-weight: 500;
+            color: $colorSecondary;
+            font-variant: small-caps;
+        }
+    
+        &__title {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.571;
+            font-variant: small-caps;
+        }
+    
+        &__blockquote {
+            min-width: 304px;
+            margin: 24px 0 auto;
+    
+            font-style: italic;
+        }
+}
+
